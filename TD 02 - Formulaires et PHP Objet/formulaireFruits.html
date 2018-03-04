@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset= 'utf-8' />
+        <title> Fruits </title>
+      </head>
+      <body>
+        <h1>Manger 5 fruits et légumes par jour !</h1>
+        <form action="afficheFruits.php" method="POST">
+          <ul>
+            <li><input type="checkbox" name="fruits[]" value="mangues">Mangues</li>
+            <li><input type="checkbox" name="fruits[]" value="bananes">Bananes</li>
+            <li><input type="checkbox" name="fruits[]" value="poires">Poires</li>
+            <li><input type="checkbox" name="fruits[]" value="fraises">Fraises</li>
+            <li><input type="checkbox" name="fruits[]" value="melons">Melons</li>
+          </ul>
+          <input type="submit" name="submit" value="Afficher"/>
+        </form>
+
+      </body>
+    </html>
