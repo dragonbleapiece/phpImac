@@ -1,0 +1,16 @@
+//Afficher toutes les personnes dans Cast.
+SELECT firstname, lastname FROM cast;
+
+//Afficher toutes les personnes vivantes.
+SELECT firstname, lastname FROM cast WHERE deathYear IS NULL;
+
+//Afficher toutes les personnes vivantes qui ont plus de 65 ans
+SELECT firstname, lastname FROM cast WHERE birthYear + 65 < YEAR(NOW());
+
+//Afficher la personne vivante la plus vieille de la base de donnée
+SELECT firstname, lastname FROM cast WHERE deathYear IS NULL ORDER BY birthYear ASC LIMIT 1;
+
+//Afficher toutes les personnes ayant entre 30 et 50 ans. Triez selon l’âge de manière
+décroissante
+SELECT firstname, lastname, birthYear FROM cast WHERE birthYear BETWEEN YEAR(NOW()) - 50 AND YEAR(NOW()) - 30;
+
